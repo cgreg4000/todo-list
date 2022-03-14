@@ -39,7 +39,7 @@ const TodoList = () => {
                 todoArray.map( (item, i) => {
                     return <div className="flex mb-3" key={i}>
                         <div className="flex-2">
-                            <input type="checkbox" onClick={()=>taskCompleted(i)} />
+                            <input type="checkbox" onChange={()=>taskCompleted(i)} checked={todoArray[i].completed}/>
                             <p style={{ textDecoration: item.completed ? "line-through" : ""}}>{item.todoInput}</p>
                             
                         </div>
